@@ -1,0 +1,77 @@
+body {
+  background-color: #666;
+  font: 16px 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0;
+
+  h2 {
+    /* margin-top: 2em; */
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    em {
+      color: gray;
+      font-size: smaller;
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+hr {
+  border: dotted gray;
+  border-width: 1px 0 0;
+  margin: 4em 0 3em;
+}
+
+main {
+  background-color: #fff;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 1em;
+}
+
+.ad-row {
+  container: ad-row / inline-size;
+  display: flex;
+  gap: max(1.5ch, 1cqw);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  .ad {
+    flex: 0 0 var(--ad-width);
+    font-size: 0;
+    scroll-snap-align: start;
+
+    img {
+      max-width: 100%;
+    }
+
+    p {
+      font-size: 1rem;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      display: -webkit-box;
+    }
+  }
+}
+
+p.hero-text {
+  font-size: 1.25em;
+}
+
+.full-width img {
+  width: 100%;
+}
+
+.ad-row-3 {
+  --ad-width: calc(45cqw - max(3ch, 2cqw));
+}
+
+.ad-row-4 {
+  --ad-width: calc(30cqw - max(3ch, 2cqw));
+}
