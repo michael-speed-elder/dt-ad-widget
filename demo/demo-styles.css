@@ -62,6 +62,7 @@ main {
 
 p.hero-text {
   font-size: 1.25em;
+  margin-top: 0.5em;
 }
 
 .full-width img {
