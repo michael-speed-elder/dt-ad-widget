@@ -1,0 +1,23 @@
+@keyframes appear {
+  from {
+    scale: 0.2;
+    filter: opacity(0);
+  }
+
+  to {
+    scale: 1;
+    filter: opacity(1);
+  }
+}
+
+// .masked {
+//   -webkit-mask-image: linear-gradient(to bottom right, #000, #0000),
+//     linear-gradient(to top, #000, #000);
+//   -webkit-mask-position-y: 0, -100cqh;
+//   -webkit-mask-repeat: no-repeat;
+//   transition: -webkit-mask-position-y 1s;
+
+//   &:hover {
+//     -webkit-mask-position-y: 100cqh, 0;
+//   }
+// }

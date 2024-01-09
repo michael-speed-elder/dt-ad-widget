@@ -1,0 +1,45 @@
+$btn-shimmer-color: hsl(225, 73%, 67%);
+$icon-shimmer-color: #d6d6d6;
+
+@keyframes shimmer {
+  0% {
+    left: -33%;
+  }
+
+  20% {
+    left: 120%;
+  }
+
+  100% {
+    left: 120%;
+  }
+}
+
+%shimmer-target {
+  position: relative;
+
+  &::after {
+    content: '';
+    animation: 10s shimmer calc(var(--animation-delay, 0) * 2s) infinite;
+    background-image: linear-gradient(
+      to right,
+      adjust-color(darkgray, $alpha: -1),
+      #d6d6d6 50%,
+      adjust-color(darkgray, $alpha: -1)
+    );
+    mix-blend-mode: color-dodge;
+    opacity: 0.75;
+    position: absolute;
+    left: -999%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(340deg);
+    width: 33%;
+  }
+
+  // @for $i from 0 to 6 {
+  //   &:nth-child(#{$i}) {
+  //     --animation-delay: #{$i};
+  //   }
+  // }
+}
