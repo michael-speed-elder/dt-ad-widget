@@ -53,7 +53,7 @@ main {
     flex: 0 0 var(--ad-width);
     font-size: 0;
     scroll-snap-align: start;
-    animation: appear 0.2s calc(var(--animation-delay) * 0.2s) both;
+    animation: appear 0.4s calc(var(--animation-delay) * 0.4s) both;
 
     @for $i from 1 to 6 {
       &:nth-child(#{$i}) {
