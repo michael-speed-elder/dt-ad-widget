@@ -38,14 +38,14 @@ main {
 }
 
 .ads {
-  container: ad-row / inline-size;
+  container-type: inline-size;
 
   .ad {
     // container-type: size;
     flex: 0 0 var(--ad-width);
     font-size: 0;
     scroll-snap-align: start;
-    animation: appear 0.4s calc(var(--animation-index) * 0.4s) both;
+    animation: appear 0.333s calc(var(--animation-index) * 0.333s) both;
 
     // @for $i from 1 to 6 {
     //   &:nth-of-type(#{$i}) {
