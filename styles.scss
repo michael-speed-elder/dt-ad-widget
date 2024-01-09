@@ -25,6 +25,10 @@ body {
   }
 }
 
-pre.error {
-  color: red;
+pre {
+  white-space: pre-wrap;
+
+  &.error {
+    color: red;
+  }
 }
