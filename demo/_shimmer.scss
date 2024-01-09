@@ -20,7 +20,7 @@ $icon-shimmer-color: #d6d6d6;
 
   &::after {
     content: '';
-    animation: 10s shimmer calc(var(--animation-delay, 0) * 2s) infinite;
+    animation: 10s shimmer calc(var(--animation-index, 0) * 2s) infinite;
     background-image: linear-gradient(
       to right,
       adjust-color(darkgray, $alpha: -1),
