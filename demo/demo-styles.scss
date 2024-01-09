@@ -1,4 +1,5 @@
 @import 'appear';
+@import 'banner';
 @import 'shimmer';
 
 body {
@@ -54,13 +55,17 @@ main {
     // }
 
     &.hero {
-      flex-basis: 100%;
       // container-type: size;
+      flex-basis: 100%;
 
       .rounded-img {
         height: 0;
         padding-top: 33%;
         position: relative;
+
+        &::before {
+          @include banner(orangered, #666, 'Instant install');
+        }
 
         img {
           position: absolute;

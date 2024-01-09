@@ -1,0 +1,18 @@
+@mixin banner($bgColor, $shadowColor, $text) {
+  content: $text;
+  background-color: $bgColor;
+  border: 1px solid darken($bgColor, 10%);
+  box-shadow: 2px 2px 5px $shadowColor;
+
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  padding: 1px 0;
+  position: absolute;
+  right: -7px;
+  top: -4px;
+  transform-origin: center;
+  transform: rotate(36deg) translate(28%, -50%);
+  width: 15em;
+  z-index: 1;
+}
