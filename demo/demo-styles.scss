@@ -4,7 +4,7 @@
 
 body {
   background-color: #666;
-  font: 16px 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font: 16px Solis, Arial, Helvetica, sans-serif;
   margin: 0;
 
   h2 {
@@ -46,7 +46,7 @@ main {
     flex: 0 0 var(--ad-width);
     font-size: 0;
     scroll-snap-align: start;
-    animation: appear 0.333s calc(var(--animation-index) * 0.333s) both;
+    animation: appear 0.5s calc(var(--animation-index) * 0.5s) both;
 
     // @for $i from 1 to 6 {
     //   &:nth-of-type(#{$i}) {
@@ -71,6 +71,11 @@ main {
           position: absolute;
           top: 0;
           left: 0;
+        }
+
+        &.crop-from-bottom img {
+          top: auto;
+          bottom: 0;
         }
       }
     }
