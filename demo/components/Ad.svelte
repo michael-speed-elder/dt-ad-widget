@@ -58,6 +58,7 @@
 
     img {
       max-width: 100%;
+      min-width: 100%;
     }
 
     p {
