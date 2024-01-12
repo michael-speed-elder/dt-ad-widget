@@ -1,0 +1,35 @@
+body {
+  background-color: #666;
+  font: 16px Solis, Arial, Helvetica, sans-serif;
+  margin: 0;
+
+  h2 {
+    /* margin-top: 2em; */
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    em {
+      color: gray;
+      font-size: smaller;
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+hr {
+  border: dotted gray;
+  border-width: 1px 0 0;
+  margin: 4em 0 3em;
+}
+
+main {
+  background-color: #fff;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 1em;
+}

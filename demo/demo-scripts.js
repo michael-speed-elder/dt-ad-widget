@@ -1,7 +1,5 @@
 'use strict'
 ;(() => {
-  const addAdIndex = () => {}
-
   const bindOnAnimEnd =
     (/** @type {Element} */ el) => (/** @type {AnimationEvent} */ evt) => {
       if (evt.animationName === 'appear') {
