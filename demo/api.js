@@ -62,7 +62,7 @@ const cached = {
       minOSVersion: null,
       mmpPartner: null,
       numberOfRatings: '10,000+',
-      productDescription: 'cookie jam',
+      productDescription: 'cookie jam pickles',
       productId: 32070,
       productImage: null,
       productName: 'Cookie Jam',
