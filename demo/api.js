@@ -369,19 +369,29 @@ const cached = {
   adListId: '03125d1e-0cea-41f4-b1dd-fc74ec755db0',
 }
 
-const apiData = readable(cached, (set) => {
+const readableData = readable(cached, (set) => {
   fetch('https://storage.googleapis.com/web-ads-cache/response.json').then(
-    (res) => set(res.json()),
+    async (res) => {
+      // const json = await res.json()
+      // console.log({ json })
+      set(await res.json())
+    },
   )
+
+  return () => {}
 })
 
 export default derived(
-  apiData,
-  ($data) =>
-    $data.campaigns.slice(0, 5).map((ad) => ({
-      title: ad.productName,
-      src: ad.productImage || ad.productThumbnail,
-      desc: ad.productDescription,
-    })),
+  readableData,
+  ($data, set) => {
+    // console.log('data', $data)
+    set(
+      $data.campaigns?.slice(0, 5).map((ad) => ({
+        title: ad.productName,
+        src: ad.productImage || ad.productThumbnail,
+        desc: ad.productDescription,
+      })),
+    )
+  },
   [],
 )
