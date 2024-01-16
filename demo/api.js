@@ -371,7 +371,7 @@ const cached = {
 
 const apiData = readable(cached, (set) => {
   fetch('https://storage.googleapis.com/web-ads-cache/response.json').then(
-    (res) => res.json(),
+    (res) => set(res.json()),
   )
 })
 
