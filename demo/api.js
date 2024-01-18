@@ -390,6 +390,9 @@ export default derived(
         title: ad.productName,
         src: ad.productImage || ad.productThumbnail,
         desc: ad.productDescription,
+        href:
+          ad.clickProxyURL ||
+          "javascript:alert('No clickProxyURL was set for this campaign')",
       })),
     )
   },

@@ -2,16 +2,17 @@
   export let title = 'App icon'
   export let desc = ''
   export let src = ''
+  export let href = ''
   export let isHero = false
   export let animIdx = 0
 </script>
 
-<div class="ad" class:hero={isHero} style="--animation-index: {animIdx}">
+<a class="ad" class:hero={isHero} style="--animation-index: {animIdx}" {href}>
   <div class="rounded-img" class:crop-from-bottom={isHero}>
     <img {src} alt={title} />
   </div>
   <p>{desc}</p>
-</div>
+</a>
 
 <style lang="scss">
   @import '../appear';
@@ -19,10 +20,12 @@
   @import '../shimmer';
 
   .ad {
+    animation: appear 0.5s calc(var(--animation-index) * 0.5s) both;
     flex: 0 0 var(--ad-width);
     font-size: 0;
     scroll-snap-align: start;
-    animation: appear 0.5s calc(var(--animation-index) * 0.5s) both;
+    color: inherit;
+    text-decoration: none;
 
     &.hero {
       flex-basis: 100%;
