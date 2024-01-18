@@ -25,10 +25,10 @@
       pre.innerText = 'Fetch error - check browser console for more details'
       pre.className = 'error'
     } else {
-      const text = await res.text()
+      const json = await res.json()
 
-      console.log({ text })
-      pre.innerText = text || '<empty string>'
+      console.log({ text: json })
+      pre.innerText = JSON.stringify(json, '', 2) || '<empty string>'
       pre.className = ''
     }
   }
