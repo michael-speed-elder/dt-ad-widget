@@ -15,9 +15,9 @@
 </a>
 
 <style lang="scss">
-  @import '../appear';
-  @import '../banner';
-  @import '../shimmer';
+  @import './styles/appear';
+  @import './styles/banner';
+  @import './styles/shimmer';
 
   .dtad {
     animation: appear 0.5s calc(var(--animation-index) * 0.5s) both;

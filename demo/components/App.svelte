@@ -1,6 +1,6 @@
 <script>
-  import AdRow from './AdRow.svelte'
-  import Ad from './Ad.svelte'
+  import AdRow from '../../components/AdRow.svelte'
+  import Ad from '../../components/Ad.svelte'
   import staticData from '../data'
   import api from '../api'
 </script>
