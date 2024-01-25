@@ -6,7 +6,7 @@
 </script>
 
 <h2 id="static">Static data</h2>
-<div class="ads">
+<div class="dtads">
   <Ad {...staticData[0]} isHero />
   <AdRow>
     {#each staticData.slice(1) as ad, idx}
@@ -18,7 +18,7 @@
 <hr />
 
 <h2 id="api">API data</h2>
-<div class="ads">
+<div class="dtads">
   <Ad {...$api[0]} isHero />
   <AdRow>
     {#each $api.slice(1) as ad, idx}
@@ -28,7 +28,7 @@
 </div>
 
 <style lang="scss">
-  .ads {
+  .dtads {
     container-type: inline-size;
   }
 </style>

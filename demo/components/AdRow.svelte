@@ -3,7 +3,7 @@
 </script>
 
 <div
-  class="ad-row ad-row-4"
+  class="dtad-row dtad-row-4"
   class:scroll-snap={useScrollSnap}
   on:animationend|once={() => (useScrollSnap = true)}
 >
@@ -11,7 +11,7 @@
 </div>
 
 <style lang="scss">
-  .ad-row {
+  .dtad-row {
     display: flex;
     gap: max(1.5ch, 1cqw);
     overflow-x: auto;
@@ -21,7 +21,7 @@
     }
   }
 
-  .ad-row-4 {
+  .dtad-row-4 {
     --ad-width: calc(30cqw - max(3ch, 2cqw));
   }
 </style>

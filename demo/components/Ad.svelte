@@ -7,7 +7,7 @@
   export let animIdx = 0
 </script>
 
-<a class="ad" class:hero={isHero} style="--animation-index: {animIdx}" {href}>
+<a class="dtad" class:hero={isHero} style="--animation-index: {animIdx}" {href}>
   <div class="rounded-img" class:crop-from-bottom={isHero}>
     <img {src} alt={title} />
   </div>
@@ -19,7 +19,7 @@
   @import '../banner';
   @import '../shimmer';
 
-  .ad {
+  .dtad {
     animation: appear 0.5s calc(var(--animation-index) * 0.5s) both;
     flex: 0 0 var(--ad-width);
     font-size: 0;
