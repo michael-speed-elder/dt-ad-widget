@@ -36,7 +36,7 @@
         position: relative;
 
         &::before {
-          @include banner(orangered, #666, 'Instant install');
+          @include banner(orangered, #666, 'Instant Install');
         }
 
         img {

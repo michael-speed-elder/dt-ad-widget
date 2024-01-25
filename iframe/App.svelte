@@ -1,14 +1,15 @@
 <script>
   import AdRow from '../components/AdRow.svelte'
   import Ad from '../components/Ad.svelte'
-  import api from '../api'
+  // import api from '../api'
+  import staticData from '../data'
 </script>
 
-<h2 id="api">Games</h2>
+<h2 id="api">Top Apps</h2>
 <div class="dtads">
-  <Ad {...$api[0]} isHero />
+  <Ad {...staticData[0]} isHero />
   <AdRow>
-    {#each $api.slice(1) as ad, idx}
+    {#each staticData.slice(1) as ad, idx}
       <Ad {...ad} animIdx={idx + 1} />
     {/each}
   </AdRow>
@@ -17,5 +18,9 @@
 <style lang="scss">
   .dtads {
     container-type: inline-size;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 </style>
