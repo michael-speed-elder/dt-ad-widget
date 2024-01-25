@@ -3,6 +3,10 @@ body {
   font: 16px Solis, Arial, Helvetica, sans-serif;
   margin: 0;
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   h2 {
     /* margin-top: 2em; */
 

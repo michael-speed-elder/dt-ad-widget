@@ -19,6 +19,10 @@
     &.scroll-snap {
       scroll-snap-type: x mandatory;
     }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   .dtad-row-4 {

@@ -18,9 +18,5 @@
 <style lang="scss">
   .dtads {
     container-type: inline-size;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
   }
 </style>
